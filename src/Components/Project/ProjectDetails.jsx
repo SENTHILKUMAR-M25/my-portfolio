@@ -255,7 +255,7 @@ export default function ProjectDetail() {
     const fetchProject = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/projects/${id}`
+          `https://portfolio-036e.onrender.com/api/projects/${id}`
         );
         setProject(res.data);
       } catch (err) {
@@ -316,7 +316,7 @@ export default function ProjectDetail() {
           transition={{ duration: 1.5 }}
           src={
             project.image
-              ? `http://localhost:5000${project.image}`
+              ? `https://portfolio-036e.onrender.com${project.image}`
               : "/placeholder.png"
           }
           alt={project.title}
